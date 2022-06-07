@@ -5,7 +5,6 @@ import br.com.handora.autor.validaCPF.CPFValida;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.internal.constraintvalidators.hv.br.CPFValidator;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -1,5 +1,6 @@
 package br.com.handora.autor.controller;
 
+import br.com.handora.autor.dto.AutorDTO;
 import br.com.handora.autor.model.Autor;
 import br.com.handora.autor.repository.AutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,10 +36,10 @@ public class AutorController {
 
     @Transactional
     @PostMapping
-    public ResponseEntity<Autor> cadastrar (@RequestBody @Valid Autor autor, UriComponentsBuilder uriComponentsBuilder) {
-        autorRepository.save(autor);
+    public ResponseEntity<Autor> cadastrar (@RequestBody @Valid AutorDTO autorDTO, UriComponentsBuilder uriComponentsBuilder) {
+        autorRepository.save(autorDTO.converter());
 
-        URI uri = uriComponentsBuilder.path("/autores/{id}").buildAndExpand(autor.getId()).toUri();
+        URI uri = uriComponentsBuilder.path("/autores/{id}").buildAndExpand(autorDTO.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
 }
