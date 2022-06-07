@@ -20,17 +20,6 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 public class Autor {
 
-//    Todo autor cadastrado tem um nome, email, descrição e CPF;
-//    Todas as informações de um autor são obrigatórias;
-//    O nome e email devem ter tamanho máximo de 120 caracteres;
-//    A descrição deve ter tamanho máximo de 2500 caracteres;
-//    O CPF deve ser válido;
-
-
-//    Para sua API REST:
-//            6.1 Em caso de sucesso, a resposta de sua API devera retorna no cabeçalho a location do novo recurso criado, o STATUS HTTP 201 e o corpo devera ser vazio.
-//            6.2 Em caso de falha, a resposta de sua API devera retorna o STATUS HTTP 400 e o corpo devera conter as mensagens amigaveis sobre os erros de validação.
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
