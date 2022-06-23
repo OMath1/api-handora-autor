@@ -44,8 +44,6 @@ public class AutorControllerAdvice {
         mensagens.add(bindingResult);
         mensagens.add(cpf);
 
-
         return mensagens;
-
     }
 }
